@@ -24,6 +24,11 @@ export default class TopChart {
     }
 
     public async get(data: TopChartGetOptions): Promise<Music[]> {
+        /**
+         * Get top chart from CSN API.
+         * @param {TopChartGetOptions} data - get top chart data.
+         * @returns array of songs.
+         */
         if (!this.allowedCategory.includes(data.category)) throw new TypeError("This category is not allowed.");
 
         const result: Music[] = [];

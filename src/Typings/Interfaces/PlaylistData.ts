@@ -7,7 +7,7 @@ export default interface PlaylistData {
     artists: ArtistData[]
 }
 
-interface ArtistData {
+export interface ArtistData {
     url: string,
     name: string,
 }

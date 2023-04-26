@@ -1,13 +1,13 @@
 export type LoginAPIData<C> = C extends 200 ? LoginSuccess : LoginFailed;
 
-interface LoginFailed {
+export interface LoginFailed {
     message: string,
     code: 400,
     data: null,
     error: string,
 }
 
-interface LoginSuccess {
+export interface LoginSuccess {
     message: string,
     code: 200,
     data: {

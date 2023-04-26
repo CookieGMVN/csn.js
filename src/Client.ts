@@ -34,6 +34,10 @@ export default class Client extends EventEmitter {
     }
 
     public async login(data: LoginData): Promise<void> {
+        /**
+         * Login to your CSN account.
+         * @param {LoginData} data - your login credentials.
+         */
         // Input validation
         if (!data.password && !data.email) throw new LoginError("You need to login with your account's email and password.");
         if (data.email && !data.password) throw new LoginError("You need to define password if you want to login by your email.");

@@ -13,6 +13,7 @@ export default class Music {
     public coverURL: string;
     public listened: number;
     public title: string;
+    public songDetails: any;
 
     public constructor(client: Client, songData: SongSearchData) {
         this.client = client;
@@ -26,6 +27,10 @@ export default class Music {
     }
 
     private async getSongDetails(): Promise<any> {
+        /**
+         * Get song details.
+         * @returns the song data from CSN's API.
+         */
         return new Promise((res, rej) => {
             axios({
                 url: encodeURI(GET_AUDIO_ENDPOINT),
@@ -44,6 +49,10 @@ export default class Music {
     }
 
     public async getAudioUrl(): Promise<FileURL[]> {
+        /**
+         * Get list of audio URL of the song.
+         * @returns audio URLs, in an array.
+         */
         const audioUrl: FileURL[] = [];
         const songDetails = await this.getSongDetails();
 
@@ -60,6 +69,10 @@ export default class Music {
     }
 
     public async getLyrics(): Promise<string> {
+        /**
+         * Get song's lyrics.
+         * @returns song's lyrics, in string.
+         */
         const songDetails = await this.getSongDetails();
         let songLyrics: string = songDetails.data.music.music_lyric;
 
@@ -73,11 +86,19 @@ export default class Music {
     }
 
     public async getMusicLength(): Promise<number> {
+        /**
+         * Get song's length.
+         * @returns get song's length, in seconds.
+         */
         const songDetails = await this.getSongDetails();
         return Number(songDetails.data.music.music_length);
     }
 
     public async getSuggestions(): Promise<Music[]> {
+        /**
+         * Get song's suggestion.
+         * @returns array of song suggested by CSN.
+         */
         const songDetails = await this.getSongDetails();
         const result: Music[] = [];
 
@@ -95,6 +116,9 @@ export default class Music {
     }
 
     public addToFavourite(): void {
+        /**
+         * Add current song to favourite list. Account required.
+         */
         if (!this.client.sessionId) throw new TypeError("You are not logged in.");
         axios({
             url: encodeURI(ADD_FAVOURITE_ENDPOINT),

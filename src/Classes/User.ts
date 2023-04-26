@@ -15,6 +15,10 @@ export default class User {
     }
 
     public async getProfile(userId?: number): Promise<ProfileDetails> {
+        /**
+         * Get user profile. If logged in, user to get by default is yours. If not, specify user ID is needed.
+         * @param {number} userId - ID of user needs to be get.
+         */
         if (userId == null && this.client.sessionId) userId = this.client.userData.id;
         if (userId == null && !this.client.sessionId) throw new TypeError("Please provide an user ID to get profile.");
 
@@ -65,6 +69,9 @@ export default class User {
     }
 
     public async getFavouriteSongs(userId?: number): Promise<Music[]> {
+        /**
+         * Get favourite song of one user. If logged in, user to get by default is yours. If not, specify user ID is needed.
+         */
         if (userId == null && this.client.sessionId) userId = this.client.userData.id;
         if (userId == null && !this.client.sessionId) throw new TypeError("Please provide an user ID to get profile.");
 

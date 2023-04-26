@@ -13,6 +13,11 @@ export default class Search {
     }
 
     public async song(q: string): Promise<Music[]> {
+        /**
+         * Search for songs.
+         * @param {string} q - song name.
+         * @returns array of songs found.
+         */
         const searchData = await axios({
             baseURL: encodeURI(SEARCH_ENDPOINT),
             method: "GET",
