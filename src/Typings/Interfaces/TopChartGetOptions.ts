@@ -1,3 +1,6 @@
+/**
+ * Option to run get top chart.
+ */
 export default interface TopChartGetOptions {
     category: "beat-playback" | "vietnam" | "us-uk" | "chinese" | "korea" | "japan" | "france" | "other",
 }

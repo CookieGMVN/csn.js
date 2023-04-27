@@ -5,6 +5,9 @@ import FileURL from "../Typings/Interfaces/FileURL";
 import SongSearchData from "../Typings/Interfaces/SongSearchData";
 import { ADD_FAVOURITE_ENDPOINT, GET_AUDIO_ENDPOINT } from "../Utils/Constants";
 
+/**
+ * An object for songs.
+ */
 export default class Music {
     private readonly client: Client;
     public readonly songData: SongSearchData;
@@ -26,11 +29,11 @@ export default class Music {
         this.title = songData.title;
     }
 
+    /**
+    * Get song details.
+    * @returns the song data from CSN's API.
+    */
     private async getSongDetails(): Promise<any> {
-        /**
-         * Get song details.
-         * @returns the song data from CSN's API.
-         */
         return new Promise((res, rej) => {
             axios({
                 url: encodeURI(GET_AUDIO_ENDPOINT),
@@ -48,11 +51,11 @@ export default class Music {
         });
     }
 
+    /**
+     * Get list of audio URL of the song.
+     * @returns audio URLs, in an array.
+    */
     public async getAudioUrl(): Promise<FileURL[]> {
-        /**
-         * Get list of audio URL of the song.
-         * @returns audio URLs, in an array.
-         */
         const audioUrl: FileURL[] = [];
         const songDetails = await this.getSongDetails();
 
@@ -69,10 +72,10 @@ export default class Music {
     }
 
     public async getLyrics(): Promise<string> {
-        /**
-         * Get song's lyrics.
-         * @returns song's lyrics, in string.
-         */
+    /**
+     * Get song's lyrics.
+     * @returns song's lyrics, in string.
+    */
         const songDetails = await this.getSongDetails();
         let songLyrics: string = songDetails.data.music.music_lyric;
 
@@ -85,20 +88,20 @@ export default class Music {
         return songLyrics;
     }
 
+    /**
+     * Get song's length.
+     * @returns get song's length, in seconds.
+    */
     public async getMusicLength(): Promise<number> {
-        /**
-         * Get song's length.
-         * @returns get song's length, in seconds.
-         */
         const songDetails = await this.getSongDetails();
         return Number(songDetails.data.music.music_length);
     }
 
+    /**
+     * Get song's suggestion.
+     * @returns array of song suggested by CSN.
+     */
     public async getSuggestions(): Promise<Music[]> {
-        /**
-         * Get song's suggestion.
-         * @returns array of song suggested by CSN.
-         */
         const songDetails = await this.getSongDetails();
         const result: Music[] = [];
 
@@ -115,10 +118,10 @@ export default class Music {
         return result;
     }
 
+    /**
+     * Add current song to favourite list. Account required.
+     */
     public addToFavourite(): void {
-        /**
-         * Add current song to favourite list. Account required.
-         */
         if (!this.client.sessionId) throw new TypeError("You are not logged in.");
         axios({
             url: encodeURI(ADD_FAVOURITE_ENDPOINT),

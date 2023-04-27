@@ -13,6 +13,7 @@ class Music {
     coverURL;
     listened;
     title;
+    songDetails;
     constructor(client, songData) {
         this.client = client;
         this.songData = songData;

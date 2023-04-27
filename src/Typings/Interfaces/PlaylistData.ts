@@ -1,3 +1,6 @@
+/**
+ * Data of a playlist.
+ */
 export default interface PlaylistData {
     title: string,
     url: string,
@@ -7,6 +10,9 @@ export default interface PlaylistData {
     artists: ArtistData[]
 }
 
+/**
+ * Basic data of an artist.
+ */
 export interface ArtistData {
     url: string,
     name: string,

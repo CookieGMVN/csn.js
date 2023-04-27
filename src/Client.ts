@@ -18,6 +18,9 @@ declare module 'node:events' {
     }
 }
 
+/**
+ * Main client class to get data from Chiasenhac's API.
+ */
 export default class Client extends EventEmitter {
 
     public sessionId: string | null = null;
@@ -28,16 +31,16 @@ export default class Client extends EventEmitter {
     public topChart = new TopChart(this);
     public user = new User(this);
 
-    public constructor(options: ClientOptions = {}) {
+    public constructor(options: ClientOptions | null = {}) {
         super({ captureRejections: true });
         if (options.noWarnings) this.clientOptions.noWarnings = options.noWarnings;
     }
 
+    /**
+     * Login to your CSN account.
+     * @param {LoginData} data - your login credentials.
+    */
     public async login(data: LoginData): Promise<void> {
-        /**
-         * Login to your CSN account.
-         * @param {LoginData} data - your login credentials.
-         */
         // Input validation
         if (!data.password && !data.email) throw new LoginError("You need to login with your account's email and password.");
         if (data.email && !data.password) throw new LoginError("You need to define password if you want to login by your email.");

@@ -1,3 +1,6 @@
+/**
+ * Basic information of an CSN user.
+ */
 export default interface ProfileDetails {
     id: number,
     username: string,

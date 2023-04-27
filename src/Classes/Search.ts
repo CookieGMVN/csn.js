@@ -4,6 +4,9 @@ import HTTPError from "../Typings/Classes/HTTPError";
 import { SEARCH_ENDPOINT } from "../Utils/Constants";
 import Music from "./Music";
 
+/**
+ * An object for search API.
+ */
 export default class Search {
 
     private readonly client: Client;
@@ -12,12 +15,12 @@ export default class Search {
         this.client = client;
     }
 
+    /**
+     * Search for songs.
+     * @param {string} q - song name.
+     * @returns array of songs found.
+     */
     public async song(q: string): Promise<Music[]> {
-        /**
-         * Search for songs.
-         * @param {string} q - song name.
-         * @returns array of songs found.
-         */
         const searchData = await axios({
             baseURL: encodeURI(SEARCH_ENDPOINT),
             method: "GET",

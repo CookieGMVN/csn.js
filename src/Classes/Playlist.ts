@@ -4,6 +4,9 @@ import PlaylistData from "../Typings/Interfaces/PlaylistData";
 import { ADD_PLAYLIST_ENDPOINT, BASE_CSN_URL, DELETE_PLAYLIST_ENDPOINT, DETAILS_PLAYLIST_ENDPOINT, EDIT_PLAYLIST_ENDPOINT } from "../Utils/Constants";
 import Music from "./Music";
 
+/**
+ * An object for playlists.
+ */
 export default class Playlist {
     private readonly client: Client;
     public readonly playlistData: PlaylistData;
@@ -23,11 +26,11 @@ export default class Playlist {
         this.songNumber = data.songNumber;
     }
 
+    /**
+     * Add a song to current playlist. Account required.
+     * @param {Music} song - song to add to playlist.
+     */
     public async add(song: Music): Promise<void> {
-        /**
-         * Add a song to current playlist. Account required.
-         * @param {Music} song - song to add to playlist.
-         */
         if (!this.client.sessionId) throw new TypeError("You are not logged in.");
         axios({
             url: encodeURI(ADD_PLAYLIST_ENDPOINT),
@@ -40,11 +43,11 @@ export default class Playlist {
         });
     }
 
+    /**
+     * Remove a song from current playlist. Account required.
+     * @param {Music} song - song to remove from playlist.
+     */
     public async remove(song: Music): Promise<void> {
-        /**
-         * Remove a song from current playlist. Account required.
-         * @param {Music} song - song to remove from playlist.
-         */
         if (!this.client.sessionId) throw new TypeError("You are not logged in.");
 
         axios({
@@ -59,12 +62,12 @@ export default class Playlist {
             }
         })
     }
-
+    
+    /**
+     * Edit current playlist.
+     * @param {string} name - new name of the playlist.
+     */
     public async edit(name: string): Promise<void> {
-        /**
-         * Edit current playlist.
-         * @param {string} name - new name of the playlist.
-         */
         if (!this.client.sessionId) throw new TypeError("You are not logged in.");
         
         axios({
@@ -79,11 +82,11 @@ export default class Playlist {
         })
     }
 
+    /**
+     * Get details of current playlist
+     * @returns playlist's songs.
+     */
     public async getDetails(): Promise<Music[]> {
-        /**
-         * Get details of current playlist
-         * @returns playlist's songs.
-         */
         const playlistDetails = await axios({
             url: encodeURI(DETAILS_PLAYLIST_ENDPOINT),
             method: "GET",
@@ -107,10 +110,10 @@ export default class Playlist {
         return response;
     }
 
+    /**
+     * Delete current playlist. Account required.
+     */
     public async delete(): Promise<void> {
-        /**
-         * Delete current playlist. Account required.
-         */
         if (!this.client.sessionId) throw new TypeError("You are not logged in.");
         axios({
             url: encodeURI(DELETE_PLAYLIST_ENDPOINT),

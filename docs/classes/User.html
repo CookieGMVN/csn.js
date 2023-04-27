@@ -15,12 +15,15 @@
 <li><a href="../modules.html">CSN.JS</a></li>
 <li><a href="User.html">User</a></li></ul>
 <h1>Class User</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>An object for user.</p>
+</div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><span class="target">User</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/b0e5a10/src/Classes/User.ts#L10">src/Classes/User.ts:10</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/9b5a642/src/Classes/User.ts#L13">src/Classes/User.ts:13</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -55,14 +58,14 @@
 <h5><span class="tsd-kind-parameter">client</span>: <a href="Client.html" class="tsd-signature-type tsd-kind-class">Client</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="User.html" class="tsd-signature-type tsd-kind-class">User</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/b0e5a10/src/Classes/User.ts#L13">src/Classes/User.ts:13</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/9b5a642/src/Classes/User.ts#L16">src/Classes/User.ts:16</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="client" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>client</span><a href="#client" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">client</span><span class="tsd-signature-symbol">:</span> <a href="Client.html" class="tsd-signature-type tsd-kind-class">Client</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/b0e5a10/src/Classes/User.ts#L11">src/Classes/User.ts:11</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/9b5a642/src/Classes/User.ts#L14">src/Classes/User.ts:14</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="getProfile" class="tsd-anchor"></a>
@@ -70,19 +73,25 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getProfile.getProfile-1"><span class="tsd-kind-call-signature">get<wbr/>Profile</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">userId</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ProfileDetails.html" class="tsd-signature-type tsd-kind-interface">ProfileDetails</a><span class="tsd-signature-symbol">&gt;</span><a href="#getProfile.getProfile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get user profile. If logged in, user to get by default is yours. If not, specify user ID is needed.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">userId</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">userId</span>: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>ID of user needs to be get.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ProfileDetails.html" class="tsd-signature-type tsd-kind-interface">ProfileDetails</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/b0e5a10/src/Classes/User.ts#L17">src/Classes/User.ts:17</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/9b5a642/src/Classes/User.ts#L24">src/Classes/User.ts:24</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getFavouriteSongs" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Favourite<wbr/>Songs</span><a href="#getFavouriteSongs" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getFavouriteSongs.getFavouriteSongs-1"><span class="tsd-kind-call-signature">get<wbr/>Favourite<wbr/>Songs</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">userId</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Music.html" class="tsd-signature-type tsd-kind-class">Music</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><a href="#getFavouriteSongs.getFavouriteSongs-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get favourite song of one user. If logged in, user to get by default is yours. If not, specify user ID is needed.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -90,28 +99,36 @@
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">userId</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Music.html" class="tsd-signature-type tsd-kind-class">Music</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/b0e5a10/src/Classes/User.ts#L71">src/Classes/User.ts:71</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/9b5a642/src/Classes/User.ts#L77">src/Classes/User.ts:77</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getListenHistory" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Listen<wbr/>History</span><a href="#getListenHistory" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getListenHistory.getListenHistory-1"><span class="tsd-kind-call-signature">get<wbr/>Listen<wbr/>History</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Music.html" class="tsd-signature-type tsd-kind-class">Music</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><a href="#getListenHistory.getListenHistory-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Get listen history of your account. Account required.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">options</span>: <a href="../interfaces/GetListenHistoryOptions.html" class="tsd-signature-type tsd-kind-interface">GetListenHistoryOptions</a><span class="tsd-signature-symbol"> = ...</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Music.html" class="tsd-signature-type tsd-kind-class">Music</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">options</span>: <a href="../interfaces/GetListenHistoryOptions.html" class="tsd-signature-type tsd-kind-interface">GetListenHistoryOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+<div class="tsd-comment tsd-typography"><p>history options.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Music.html" class="tsd-signature-type tsd-kind-class">Music</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4><p>array of what you listened.</p>
+<aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/b0e5a10/src/Classes/User.ts#L106">src/Classes/User.ts:106</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/9b5a642/src/Classes/User.ts#L114">src/Classes/User.ts:114</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getAllPlaylists" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>All<wbr/>Playlists</span><a href="#getAllPlaylists" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="getAllPlaylists.getAllPlaylists-1"><span class="tsd-kind-call-signature">get<wbr/>All<wbr/>Playlists</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Playlist.html" class="tsd-signature-type tsd-kind-class">Playlist</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><a href="#getAllPlaylists.getAllPlaylists-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Playlist.html" class="tsd-signature-type tsd-kind-class">Playlist</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Get all your playlists. Account required.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="Playlist.html" class="tsd-signature-type tsd-kind-class">Playlist</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4><p>array of playlist.</p>
+<aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/b0e5a10/src/Classes/User.ts#L137">src/Classes/User.ts:137</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/CookieGMVN/csn.js/blob/9b5a642/src/Classes/User.ts#L149">src/Classes/User.ts:149</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">

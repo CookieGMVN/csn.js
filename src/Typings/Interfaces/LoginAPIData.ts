@@ -1,5 +1,11 @@
+/**
+ * Specify if login success or failed.
+ */
 export type LoginAPIData<C> = C extends 200 ? LoginSuccess : LoginFailed;
 
+/**
+ * Login failed notification.
+ */
 export interface LoginFailed {
     message: string,
     code: 400,
@@ -7,6 +13,9 @@ export interface LoginFailed {
     error: string,
 }
 
+/**
+ * Login success notification.
+ */
 export interface LoginSuccess {
     message: string,
     code: 200,

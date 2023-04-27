@@ -5,6 +5,9 @@ import TopChartGetOptions from "../Typings/Interfaces/TopChartGetOptions";
 import { GET_TOPCHART_ENDPOINT } from "../Utils/Constants";
 import Music from "./Music";
 
+/**
+ * An object to get CSN's top chart.
+ */
 export default class TopChart {
     private readonly client: Client;
     private readonly allowedCategory = ["beat-playback", "vietnam", "us-uk", "chinese", "korea", "japan", "france", "other"];
@@ -23,12 +26,12 @@ export default class TopChart {
         this.client = client;
     }
 
+    /**
+     * Get top chart from CSN API.
+     * @param {TopChartGetOptions} data - get top chart data.
+     * @returns array of songs.
+     */
     public async get(data: TopChartGetOptions): Promise<Music[]> {
-        /**
-         * Get top chart from CSN API.
-         * @param {TopChartGetOptions} data - get top chart data.
-         * @returns array of songs.
-         */
         if (!this.allowedCategory.includes(data.category)) throw new TypeError("This category is not allowed.");
 
         const result: Music[] = [];
