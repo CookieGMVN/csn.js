@@ -14,7 +14,7 @@ For further documentation, please visit [docs page](https://csnjs.nezukobot.vn/)
 
 ## Example
 
-For more examples, visit [here]("./examples/")
+For more examples, visit [here](./examples/)
 
 CommonJS (no account):
 
